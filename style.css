@@ -56,18 +56,129 @@ body {
     height: 100%;
 }
 
-
 .add-book {
-    background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: #cbd5e1;
     min-width: 200px;
     width: 30%;
 }
 
-.library {
-    background-color: blue;
-    width: 100%;
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+
+	width: 80%;
+	padding: 10px;
+
+	background-color: #94a3b8;
+	border-radius: 5px;
+	box-shadow: 4px 7px 5px 0px #94a3b8;
+}
+
+form h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+form label {
+	font-weight: bold
 }
 
 form button {
-    
+	border-radius: 5px;
+	border: none;
+	height: 30px;
+	width: 100px;
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 17px;
+	background-color: #f1f5f9;
+}
+
+form button:hover {
+	background-color: #64748b;
+}
+
+input:focus:invalid {
+	outline: none;
+    border-color:#9f1239;
+    box-shadow: 0 0 2px #9f1239;
+}
+
+input:focus:valid {
+	outline: none;
+    border-color:#059669;
+    box-shadow: 0 0 2px #059669;
+}
+
+.form-pair {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.form-pair input {
+	border-radius: 4px;
+	border: none;
+	height: 20px;
+}
+
+.form-pair.read {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.library {
+	padding: 15px;
+
+    background-color: #334155;
+    width: 100%;
+	overflow: auto;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 300px);
+	justify-items: center;
+	align-items: center;
+	justify-content: space-around;
+	gap: 15px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 5px;
+
+	height: 150px;
+	width: 300px;
+
+	overflow: auto;
+
+	color: white;
+	background-color: #0f172a;
+
+	border-left: 10px solid #9f1239;
+	border-radius: 10px;
+	box-shadow: 4px 7px 5px 0px #0f172a;
+}
+
+.card.read, .card:hover {
+	border-left: 10px solid #059669;
+}
+
+.card.read:hover {
+	border-left: 10px solid #9f1239;
+}
+
+
+.card h1 {
+	font-size: 25px;
+	font-weight: bold;
 }
